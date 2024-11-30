@@ -10,24 +10,89 @@
   <body>
     <!-- Start: Navbar -->
     <nav
-      class="max-w-6xl mx-auto flex justify-between items-center py-11 border-b px-5 lg:px-0"
+      class="max-w-6xl mx-auto flex justify-between items-center py-4 border-b px-5 lg:px-0"
     >
-      <h1 class="text-2xl font-bold">Exclusive</h1>
-      <ul class="gap-12 hidden lg:flex">
-        <li><a href="#" class="text-base font-normal">Home</a></li>
-        <li><a href="#" class="text-base font-normal">Contact</a></li>
-        <li><a href="#" class="text-base font-normal">About</a></li>
-        <li><a href="#" class="text-base font-normal">Sign Up</a></li>
+      <!-- Logo -->
+      <h1 class="text-2xl font-bold order-2 lg:order-1">Exclusive</h1>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden lg:flex gap-12 order-2">
+        <li>
+          <a href="/index.html" class="text-base font-normal hover:text-green-500"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a href="/src/pages/contact.html" class="text-base font-normal hover:text-green-500"
+            >Contact</a
+          >
+        </li>
+        <li>
+          <a href="/src/pages/about.html" class="text-base font-normal hover:text-green-500"
+            >About</a
+          >
+        </li>
+        <li>
+          <a href="/src/pages/signup.html" class="text-base font-normal hover:text-green-500"
+            >Sign Up</a
+          >
+        </li>
       </ul>
-      <div class="flex gap-6">
-        <img src="/dist/img/Wishlist.svg" alt="" />
-        <img src="/dist/img/Cart1 with buy.svg" alt="" />
+
+      <!-- Icons -->
+      <div class="flex gap-6 order-3">
+        <img src="/dist/img/Wishlist.svg" alt="Wishlist" class="w-6 h-6" />
+        <img src="/dist/img/Cart1 with buy.svg" alt="Cart" class="w-6 h-6" />
+      </div>
+
+      <!-- Hamburger Menu -->
+      <img
+        id="menu-toggle"
+        src="/dist/img/menu.svg"
+        alt="Menu"
+        class="w-6 h-6 order-1 lg:order-3 block lg:hidden cursor-pointer"
+      />
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="fixed top-0 left-0 w-[70%] h-full bg-gray-800 text-white transform -translate-x-full transition-transform duration-300 lg:hidden"
+      >
+        <div
+          class="p-5 flex justify-between items-center border-b border-gray-700"
+        >
+          <h1 class="text-2xl font-bold">Exclusive</h1>
+          <img  id="menu-close" src="/dist/img/x.svg" alt="" class="text-white">
+        </div>
+        <ul class="flex flex-col gap-5 p-8">
+          <li>
+            <a href="#" class="text-base font-normal hover:text-green-500"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="#" class="text-base font-normal hover:text-green-500"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a href="#" class="text-base font-normal hover:text-green-500"
+              >About</a
+            >
+          </li>
+          <li>
+            <a href="#" class="text-base font-normal hover:text-green-500"
+              >Sign Up</a
+            >
+          </li>
+        </ul>
       </div>
     </nav>
+
     <!-- End: Navbar -->
 
     <!-- Start: Carousel -->
-    <section class="relative max-w-6xl mx-auto mt-10 overflow-hidden">
+    <section class="relative max-w-6xl mx-auto mt-10 overflow-hidden hidden lg:block">
       <div class="flex transition-transform duration-500" id="carousel">
         <div class="w-full flex-shrink-0 px-5 lg:px-0">
           <img

@@ -53,5 +53,35 @@ function updateCountdown() {
 setInterval(updateCountdown, 1000);
 updateCountdown();
 
+// NAVBAR
+
+// Select elements
+const menuToggle = document.getElementById('menu-toggle');
+const menuClose = document.getElementById('menu-close');
+const mobileMenu = document.getElementById('mobile-menu');
+
+// Function to close the menu
+const closeMenu = () => {
+  mobileMenu.classList.add('-translate-x-full');
+};
+
+// Open menu
+menuToggle.addEventListener('click', (e) => {
+  e.stopPropagation(); // Prevent triggering the document click event
+  mobileMenu.classList.remove('-translate-x-full');
+});
+
+// Close menu when clicking close button
+menuClose.addEventListener('click', closeMenu);
+
+// Close menu when clicking outside the menu
+document.addEventListener('click', (e) => {
+  if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+    closeMenu();
+  }
+});
+
+
+
 
 
