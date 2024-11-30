@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/dist/css/main.css" />
+    <title>Exclusive</title>
+  </head>
+  <body>
+    <!-- Start: Navbar -->
+    <nav
+      class="max-w-6xl mx-auto flex justify-between items-center py-11 border-b px-5 lg:px-0"
+    >
+      <h1 class="text-2xl font-bold">Exclusive</h1>
+      <ul class="gap-12 hidden lg:flex">
+        <li><a href="#" class="text-base font-normal">Home</a></li>
+        <li><a href="#" class="text-base font-normal">Contact</a></li>
+        <li><a href="#" class="text-base font-normal">About</a></li>
+        <li><a href="#" class="text-base font-normal">Sign Up</a></li>
+      </ul>
+      <div class="flex gap-6">
+        <img src="/dist/img/Wishlist.svg" alt="" />
+        <img src="/dist/img/Cart1 with buy.svg" alt="" />
+      </div>
+    </nav>
+    <!-- End: Navbar -->
+
+    <!-- Start: Carousel -->
+    <div class="relative max-w-6xl mx-auto mt-10 overflow-hidden">
+      <!-- Carousel Items -->
+      <div class="flex transition-transform duration-500" id="carousel">
+        <div class="w-full flex-shrink-0 px-5 lg:px-0">
+          <img
+            src="/dist/img/carousel.png"
+            alt="Slide 1"
+            class="w-full lg:h-[450px] h-[200px] rounded-lg"
+          />
+        </div>
+        <div class="w-full flex-shrink-0 px-5 lg:px-0">
+          <img
+            src="https://via.placeholder.com/800x400?text=Slide+2"
+            alt="Slide 2"
+            class="w-full lg:h-[450px] h-[200px] rounded-lg"
+          />
+        </div>
+        <div class="w-full flex-shrink-0 px-5 lg:px-0">
+          <img
+            src="https://via.placeholder.com/800x400?text=Slide+3"
+            alt="Slide 3"
+            class="w-full lg:h-[450px] h-[200px] rounded-lg"
+          />
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <button
+        id="prev"
+        class="absolute lg:top-1/2 top-28 left-6 -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-full"
+      >
+        Prev
+      </button>
+      <button
+        id="next"
+        class="absolute lg:top-1/2 top-28 right-6 -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-full"
+      >
+        Next
+      </button>
+    </div>
+    <!-- End: Carousel -->
+
+    <!-- Start: Views Product -->
+    <section class="max-w-6xl mx-auto mt-14 border-b pb-14 px-5 lg:px-0">
+      <h1 class="text-base text-[#DB4444] font-bold">Today’s</h1>
+      <div class="flex flex-col lg:flex-row lg:gap-20 gap-7 mt-4 lg:items-center items-start">
+        <h1 class="text-3xl font-bold">Flash Sales</h1>
+        <div class="flex items-center justify-center space-x-6">
+          <!-- Days -->
+          <div class="text-center">
+            <p class="text-sm text-gray-500">Days</p>
+            <p class="text-4xl font-bold" id="days">00</p>
+          </div>
+          <span class="text-red-500 text-xl font-bold">:</span>
+          <!-- Hours -->
+          <div class="text-center">
+            <p class="text-sm text-gray-500">Hours</p>
+            <p class="text-4xl font-bold" id="hours">00</p>
+          </div>
+          <span class="text-red-500 text-xl font-bold">:</span>
+          <!-- Minutes -->
+          <div class="text-center">
+            <p class="text-sm text-gray-500">Minutes</p>
+            <p class="text-4xl font-bold" id="minutes">00</p>
+          </div>
+          <span class="text-red-500 text-xl font-bold">:</span>
+          <!-- Seconds -->
+          <div class="text-center">
+            <p class="text-sm text-gray-500">Seconds</p>
+            <p class="text-4xl font-bold" id="seconds">00</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kontainer untuk gambar -->
+      <div
+        class="flex mt-10 overflow-x-auto whitespace-nowrap gap-x-4 min-w-0 scrollbar-hide"
+      >
+        <div class="flex flex-col gap-2 lg:w-[270px] w-[190px] flex-shrink-0">
+          <img
+            src="/dist/img/joystik.png"
+            alt=""
+            class="w-[270px] flex-shrink-0"
+          />
+          <h1 class="text-base font-medium">HAVIT HV-G92 Gamepad</h1>
+          <div class="flex gap-3">
+            <p class="text-base text-[#DB4444]">$120</p>
+            <p class="line-through text-base text-gray-500">$160</p>
+          </div>
+          <img src="/dist/img/star.svg" alt="" class="w-[140px]" />
+        </div>
+        <div class="flex flex-col gap-2 lg:w-[270px] w-[190px] flex-shrink-0">
+          <img
+            src="/dist/img/pic2.png"
+            alt=""
+            class="w-[270px] flex-shrink-0"
+          />
+          <h1 class="text-base font-medium">AK-900 Wired Keyboard</h1>
+          <div class="flex gap-3">
+            <p class="text-base text-[#DB4444]">$960</p>
+            <p class="line-through text-base text-gray-500">$1160</p>
+          </div>
+          <img src="/dist/img/star.svg" alt="" class="w-[140px]" />
+        </div>
+        <div class="flex flex-col gap-2 lg:w-[270px] w-[190px] flex-shrink-0">
+          <img
+            src="/dist/img/pic3.png"
+            alt=""
+            class="w-[270px] flex-shrink-0"
+          />
+          <h1 class="text-base font-medium">IPS LCD Gaming Monitor</h1>
+          <div class="flex gap-3">
+            <p class="text-base text-[#DB4444]">$370</p>
+            <p class="line-through text-base text-gray-500">$400</p>
+          </div>
+          <img src="/dist/img/star.svg" alt="" class="w-[140px]" />
+        </div>
+        <div class="flex flex-col gap-2 lg:w-[270px] w-[190px] flex-shrink-0">
+          <img
+            src="/dist/img/pic4.png"
+            alt=""
+            class="w-[270px] flex-shrink-0"
+          />
+          <h1 class="text-base font-medium">S-Series Comfort Chair</h1>
+          <div class="flex gap-3">
+            <p class="text-base text-[#DB4444]">$375</p>
+            <p class="line-through text-base text-gray-500">$400</p>
+          </div>
+          <img src="/dist/img/star.svg" alt="" class="w-[140px]" />
+        </div>
+        <div class="flex flex-col gap-2 lg:w-[270px] w-[190px] flex-shrink-0">
+          <img
+            src="/dist/img/joystik.png"
+            alt=""
+            class="w-[270px] flex-shrink-0"
+          />
+          <h1 class="text-base font-medium">HAVIT HV-G92 Gamepad</h1>
+          <div class="flex gap-3">
+            <p class="text-base text-[#DB4444]">$120</p>
+            <p class="line-through text-base text-gray-500">$160</p>
+          </div>
+          <img src="/dist/img/star.svg" alt="" class="w-[140px]" />
+        </div>
+        <div class="flex flex-col gap-2 lg:w-[270px] w-[190px] flex-shrink-0">
+          <img
+            src="/dist/img/pic2.png"
+            alt=""
+            class="w-[270px] flex-shrink-0"
+          />
+          <h1 class="text-base font-medium">AK-900 Wired Keyboard</h1>
+          <div class="flex gap-3">
+            <p class="text-base text-[#DB4444]">$960</p>
+            <p class="line-through text-base text-gray-500">$1160</p>
+          </div>
+          <img src="/dist/img/star.svg" alt="" class="w-[140px]" />
+        </div>
+        <div class="flex flex-col gap-2 lg:w-[270px] w-[190px] flex-shrink-0">
+          <img
+            src="/dist/img/pic3.png"
+            alt=""
+            class="w-[270px] flex-shrink-0"
+          />
+          <h1 class="text-base font-medium">IPS LCD Gaming Monitor</h1>
+          <div class="flex gap-3">
+            <p class="text-base text-[#DB4444]">$370</p>
+            <p class="line-through text-base text-gray-500">$400</p>
+          </div>
+          <img src="/dist/img/star.svg" alt="" class="w-[140px]" />
+        </div>
+        <div class="flex flex-col gap-2 lg:w-[270px] w-[190px] flex-shrink-0">
+          <img
+            src="/dist/img/pic4.png"
+            alt=""
+            class="w-[270px] flex-shrink-0"
+          />
+          <h1 class="text-base font-medium">S-Series Comfort Chair</h1>
+          <div class="flex gap-3">
+            <p class="text-base text-[#DB4444]">$375</p>
+            <p class="line-through text-base text-gray-500">$400</p>
+          </div>
+          <img src="/dist/img/star.svg" alt="" class="w-[140px]" />
+        </div>
+        <!-- Tambahkan elemen lainnya -->
+      </div>
+    </section>
+    <!-- End: Views Product -->
+
+    <!-- Start: Categories -->
+    <section class="max-w-6xl mx-auto mt-10 border-b pb-14 px-5 lg:px-0">
+      <span class="text-base text-[#DB4444] font-bold">Categories</span>
+      <h1 class="text-3xl font-bold mt-4">Browse By Category</h1>
+      <div class="flex flex-wrap gap-5 lg:justify-between justify-center mt-14">
+        <div
+          class="flex flex-col gap-3 border-[1.5px] h-[145px] w-[170px] justify-center rounded-lg items-center"
+        >
+          <img src="/dist/img/Category-CellPhone.svg" alt="" class="w-[56px]" />
+          <h1 class="text-base font-bold">Phones</h1>
+        </div>
+        <div
+          class="flex flex-col gap-3 border-[1.5px] h-[145px] w-[170px] justify-center rounded-lg items-center"
+        >
+          <img src="/dist/img/Category-Computer.svg" alt="" class="w-[56px]" />
+          <h1 class="text-base font-bold">Computers</h1>
+        </div>
+        <div
+          class="flex flex-col gap-3 border-[1.5px] h-[145px] w-[170px] justify-center rounded-lg items-center"
+        >
+          <img
+            src="/dist/img/Category-SmartWatch.svg"
+            alt=""
+            class="w-[56px]"
+          />
+          <h1 class="text-base font-bold">SmartWatch</h1>
+        </div>
+        <div
+          class="flex flex-col gap-3 border-[1.5px] h-[145px] w-[170px] justify-center rounded-lg items-center"
+        >
+          <img src="/dist/img/Category-Camera.svg" alt="" class="w-[56px]" />
+          <h1 class="text-base font-bold">Camera</h1>
+        </div>
+        <div
+          class="flex flex-col gap-3 border-[1.5px] h-[145px] w-[170px] justify-center rounded-lg items-center"
+        >
+          <img src="/dist/img/Category-Headphone.svg" alt="" class="w-[56px]" />
+          <h1 class="text-base font-bold">HeadPhones</h1>
+        </div>
+        <div
+          class="flex flex-col gap-3 border-[1.5px] h-[145px] w-[170px] justify-center rounded-lg items-center"
+        >
+          <img src="/dist/img/Category-Gamepad.svg" alt="" class="w-[56px]" />
+          <h1 class="text-base font-bold">Gaming</h1>
+        </div>
+      </div>
+    </section>
+    <!-- End: Categories -->
+
+    <!-- Start: Views Product -->
+    <section class="max-w-6xl mx-auto mt-14 border-b pb-14 px-5 lg:px-0">
+      <h1 class="text-base text-[#DB4444] font-bold">This Month</h1>
+      <h1 class="text-3xl font-bold mt-4">Best Selling Products</h1>
+
+      <!-- Kontainer untuk gambar -->
+      <div
+        class="flex mt-10 overflow-x-auto whitespace-nowrap gap-x-4 min-w-0 scrollbar-hide"
+      >
+        <div class="flex flex-col gap-2 lg:w-[270px] w-[190px] flex-shrink-0">
+          <img
+            src="/dist/img/product1.png"
+            alt=""
+            class="w-[270px] flex-shrink-0"
+          />
+          <h1 class="text-base font-medium">The north coat</h1>
+          <div class="flex gap-3">
+            <p class="text-base text-[#DB4444]">$260</p>
+            <p class="line-through text-base text-gray-500">$360</p>
+          </div>
+          <img src="/dist/img/star.svg" alt="" class="w-[140px]" />
+        </div>
+        <div class="flex flex-col gap-2 lg:w-[270px] w-[190px] flex-shrink-0">
+          <img
+            src="/dist/img/product2.png"
+            alt=""
+            class="w-[270px] flex-shrink-0"
+          />
+          <h1 class="text-base font-medium">Gucci duffle bag</h1>
+          <div class="flex gap-3">
+            <p class="text-base text-[#DB4444]">$960</p>
+            <p class="line-through text-base text-gray-500">$1160</p>
+          </div>
+          <img src="/dist/img/star.svg" alt="" class="w-[140px]" />
+        </div>
+        <div class="flex flex-col gap-2 lg:w-[270px] w-[190px] flex-shrink-0">
+          <img
+            src="/dist/img/product3.png"
+            alt=""
+            class="w-[270px] flex-shrink-0"
+          />
+          <h1 class="text-base font-medium">RGB liquid CPU Cooler</h1>
+          <div class="flex gap-3">
+            <p class="text-base text-[#DB4444]">$160</p>
+            <p class="line-through text-base text-gray-500">$170</p>
+          </div>
+          <img src="/dist/img/star.svg" alt="" class="w-[140px]" />
+        </div>
+        <div class="flex flex-col gap-2 lg:w-[270px] w-[190px] flex-shrink-0">
+          <img
+            src="/dist/img/product4.png"
+            alt=""
+            class="w-[270px] flex-shrink-0"
+          />
+          <h1 class="text-base font-medium">Small BookSelf</h1>
+          <div class="flex gap-3">
+            <p class="text-base text-[#DB4444]">$360</p>
+            <p class="line-through text-base text-gray-500">$400</p>
+          </div>
+          <img src="/dist/img/star.svg" alt="" class="w-[140px]" />
+        </div>
+        <div class="flex flex-col gap-2 lg:w-[270px] w-[190px] flex-shrink-0">
+          <img
+            src="/dist/img/product1.png"
+            alt=""
+            class="w-[270px] flex-shrink-0"
+          />
+          <h1 class="text-base font-medium">The north coat</h1>
+          <div class="flex gap-3">
+            <p class="text-base text-[#DB4444]">$260</p>
+            <p class="line-through text-base text-gray-500">$360</p>
+          </div>
+          <img src="/dist/img/star.svg" alt="" class="w-[140px]" />
+        </div>
+        <div class="flex flex-col gap-2 lg:w-[270px] w-[190px] flex-shrink-0">
+          <img
+            src="/dist/img/product2.png"
+            alt=""
+            class="w-[270px] flex-shrink-0"
+          />
+          <h1 class="text-base font-medium">Gucci duffle bag</h1>
+          <div class="flex gap-3">
+            <p class="text-base text-[#DB4444]">$960</p>
+            <p class="line-through text-base text-gray-500">$1160</p>
+          </div>
+          <img src="/dist/img/star.svg" alt="" class="w-[140px]" />
+        </div>
+        <div class="flex flex-col gap-2 lg:w-[270px] w-[190px] flex-shrink-0">
+          <img
+            src="/dist/img/product3.png"
+            alt=""
+            class="w-[270px] flex-shrink-0"
+          />
+          <h1 class="text-base font-medium">RGB liquid CPU Cooler</h1>
+          <div class="flex gap-3">
+            <p class="text-base text-[#DB4444]">$160</p>
+            <p class="line-through text-base text-gray-500">$170</p>
+          </div>
+          <img src="/dist/img/star.svg" alt="" class="w-[140px]" />
+        </div>
+        <div class="flex flex-col gap-2 lg:w-[270px] w-[190px] flex-shrink-0">
+          <img
+            src="/dist/img/product4.png"
+            alt=""
+            class="w-[270px] flex-shrink-0"
+          />
+          <h1 class="text-base font-medium">Small BookSelf</h1>
+          <div class="flex gap-3">
+            <p class="text-base text-[#DB4444]">$360</p>
+            <p class="line-through text-base text-gray-500">$400</p>
+          </div>
+          <img src="/dist/img/star.svg" alt="" class="w-[140px]" />
+        </div>
+        <!-- Tambahkan elemen lainnya -->
+      </div>
+    </section>
+    <!-- End: Views Product -->
+
+    <!-- Start: CTA -->
+    <section class="max-w-6xl mx-auto mt-10 relative px-5">
+      <img src="/dist/img/main2.png" alt="" class="w-full rounded-lg" />
+      <div
+        class="absolute lg:top-10 top-4 left-10 flex flex-col lg:gap-8 gap-4 justify-center p-4 items-start"
+      >
+        <span class="text-base text-semibold text-[#00FF66]">Categories</span>
+        <h1 class="lg:text-5xl font-bold text-white w-[443px]">Enhance Your Music Experience</h1>
+        <div class="gap-9 hidden lg:flex">
+          <div class="bg-white justify-center items-center px-6 py-5 rounded-full text-center">
+              <h1 class="text-xl font-bold">23</h1>
+              <p class="text-sm">Hours</p>
+          </div>
+          <div class="bg-white justify-center items-center px-7 py-5 rounded-full text-center">
+              <h1 class="text-xl font-bold">05</h1>
+              <p class="text-sm">Days</p>
+          </div>
+          <div class="bg-white justify-center items-center px-4 py-5 rounded-full text-center">
+              <h1 class="text-xl font-bold">59</h1>
+              <p class="text-sm">Minutes</p>
+          </div>
+          <div class="bg-white justify-center items-center px-4 py-5 rounded-full text-center">
+              <h1 class="text-xl font-bold">35</h1>
+              <p class="text-sm">Seconds</p>
+          </div>
+        </div>
+        <a href="#" class="bg-[#00FF66] text-white lg:py-4 lg:px-11 px-5 py-3 rounded-md">Buy Now!</a>
+      </div>
+    </section>
+    <!-- End: CTA -->
+
+    <!-- Start: Our Product -->
+    <section class="max-w-6xl mx-auto mt-14 px-5 lg:px-0">
+        <span class="text-base text-[#DB4444] font-bold">Our Products</span>
+        <h1 class="text-3xl font-bold mt-4">Explore Our Products</h1>
+        <div class="flex flex-wrap lg:justify-start justify-center gap-5 mt-14">
+            <div class="flex flex-col gap-2 lg:w-[270px] w-[190px] flex-shrink-0">
+                <img
+                  src="/dist/img/p1.png"
+                  alt=""
+                  class="w-[270px] flex-shrink-0"
+                />
+                <h1 class="text-base font-medium">Breed Dry Dog Food</h1>
+                <div class="flex gap-3">
+                  <p class="text-base text-[#DB4444]">$360</p>
+                  <img src="/dist/img/star.svg" alt="" class="w-[140px]" />
+                </div>
+              </div>
+            <div class="flex flex-col gap-2 lg:w-[270px] w-[190px] flex-shrink-0">
+                <img
+                  src="/dist/img/p2.png"
+                  alt=""
+                  class="w-[270px] flex-shrink-0"
+                />
+                <h1 class="text-base font-medium">CANON EOS DSLR Camera</h1>
+                <div class="flex gap-3">
+                  <p class="text-base text-[#DB4444]">$360</p>
+                  <img src="/dist/img/star.svg" alt="" class="w-[140px]" />
+                </div>
+              </div>
+            <div class="flex flex-col gap-2 lg:w-[270px] w-[190px] flex-shrink-0">
+                <img
+                  src="/dist/img/p3.png"
+                  alt=""
+                  class="w-[270px] flex-shrink-0"
+                />
+                <h1 class="text-base font-medium">ASUS FHD Gaming Laptop</h1>
+                <div class="flex gap-3">
+                  <p class="text-base text-[#DB4444]">$360</p>
+                  <img src="/dist/img/star.svg" alt="" class="w-[140px]" />
+                </div>
+              </div>
+            <div class="flex flex-col gap-2 lg:w-[270px] w-[190px] flex-shrink-0">
+                <img
+                  src="/dist/img/p4.png"
+                  alt=""
+                  class="w-[270px] flex-shrink-0"
+                />
+                <h1 class="text-base font-medium">Curology Product Set </h1>
+                <div class="flex gap-3">
+                  <p class="text-base text-[#DB4444]">$360</p>
+                  <img src="/dist/img/star.svg" alt="" class="w-[140px]" />
+                </div>
+              </div>
+            <div class="flex flex-col gap-2 lg:w-[270px] w-[190px] flex-shrink-0">
+                <img
+                  src="/dist/img/p5.png"
+                  alt=""
+                  class="w-[270px] flex-shrink-0"
+                />
+                <h1 class="text-base font-medium">Kids Electric Car</h1>
+                <div class="flex gap-3">
+                  <p class="text-base text-[#DB4444]">$360</p>
+                  <img src="/dist/img/star.svg" alt="" class="w-[140px]" />
+                </div>
+              </div>
+            <div class="flex flex-col gap-2 lg:w-[270px] w-[190px] flex-shrink-0">
+                <img
+                  src="/dist/img/p6.png"
+                  alt=""
+                  class="w-[270px] flex-shrink-0"
+                />
+                <h1 class="text-base font-medium">Jr. Zoom Soccer Cleats</h1>
+                <div class="flex gap-3">
+                  <p class="text-base text-[#DB4444]">$360</p>
+                  <img src="/dist/img/star.svg" alt="" class="w-[140px]" />
+                </div>
+              </div>
+            <div class="flex flex-col gap-2 lg:w-[270px] w-[190px] flex-shrink-0">
+                <img
+                  src="/dist/img/p7.png"
+                  alt=""
+                  class="w-[270px] flex-shrink-0"
+                />
+                <h1 class="text-base font-medium">GP11 Shooter USB Gamepad</h1>
+                <div class="flex gap-3">
+                  <p class="text-base text-[#DB4444]">$360</p>
+                  <img src="/dist/img/star.svg" alt="" class="w-[140px]" />
+                </div>
+              </div>
+            <div class="flex flex-col gap-2 lg:w-[270px] w-[190px] flex-shrink-0">
+                <img
+                  src="/dist/img/p8.png"
+                  alt=""
+                  class="w-[270px] flex-shrink-0"
+                />
+                <h1 class="text-base font-medium">Quilted Satin Jacket</h1>
+                <div class="flex gap-3">
+                  <p class="text-base text-[#DB4444]">$360</p>
+                  <img src="/dist/img/star.svg" alt="" class="w-[140px]" />
+                </div>
+              </div>
+        </div>
+    </section>
+    <!-- End: Our Product -->
+    <script src="/dist/script/main.js"></script>
+  </body>
+</html>
